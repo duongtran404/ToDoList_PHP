@@ -24,7 +24,7 @@
             }elseif(strtotime($begin_date)>strtotime($end_date)){
                 echo"ngay ket thuc khong the dung truoc ngay bat dau";
             }else{
-                echo "khong duoc bo trong!!!";
+                echo "khong duoc bo trong!";
             }
         }catch(PDOException $e){
             echo $e->getMessage();
