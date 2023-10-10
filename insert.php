@@ -1,15 +1,3 @@
-<form action="insert.php" method="get">
-    <label>description: </label>
-    <input type="text" name="description" value="<?php echo $row['description'] ?>">
-    <br>
-    <label for="">begin date: </label>
-    <input type="date" name="begin_date" value="<?php echo $row['begin_date'] ?>">
-    <br>
-    <label for="">end date: </label>
-    <input type="date" name="end_date" value="<?php echo $row['end_date'] ?>">
-    <br>
-    <input type="submit" name="btn_add" value="submit">
-</form>
 <?php
     include('connect.php');
     if(isset($_GET['btn_add'])){
@@ -30,3 +18,15 @@
 
     }
 ?>
+<form action="insert.php" method="get">
+    <label>description: </label>
+    <input type="text" name="description" value="<?php echo $row['description'] ?>">
+    <br>
+    <label for="">begin date: </label>
+    <input type="date" name="begin_date" value="<?php echo $row['begin_date'] ?>">
+    <br>
+    <label for="">end date: </label>
+    <input type="date" name="end_date" value="<?php echo $row['end_date'] ?>">
+    <br>
+    <input type="submit" name="btn_add" value="submit">
+</form>

@@ -1,19 +1,19 @@
 <?php
 
     include('connect.php');
-    $id = $_POST['this_id'];
+    $id = $_GET['this_id'];
     $stmt = $conn->prepare("SELECT * FROM to_do_list WHERE id = '$id'");
     $stmt->execute();
-
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $row = $stmt->fetch();
     
     if(isset($_POST['btn_edit'])){
-        $id = $_POST['this_id'];
+        $id = $_GET['this_id'];
         $description = $_POST['description'];
         $begin_date = $_POST['begin_date'];
         $end_date = $_POST['end_date'];
         $status = $_POST['status'];
+        
         try{
             if(!empty($begin_date) && !empty($end_date) && !empty($description) && strtotime($begin_date)<strtotime($end_date)){
                 $stmt = $conn->prepare("UPDATE to_do_list 
