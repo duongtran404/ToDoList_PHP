@@ -12,16 +12,23 @@ try{
 <html lang="en">
 <head>
     <style>
-        table, th, td {
+        <!-- table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
         table {
             counter-reset: tableCount;     
-        }
-            .counterCell:before {              
+        }-->
+        .counterCell:before {              
             content: counter(tableCount); 
             counter-increment: tableCount; 
+        }
+        table, th, td {
+             border: 1px solid white;
+             border-collapse: collapse;
+        }
+        th, td {
+             background-color: #96D4D4;
         }
     </style>
     <meta charset="UTF-8">
