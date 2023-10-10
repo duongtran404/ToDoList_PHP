@@ -1,7 +1,7 @@
 <?php
 
     include('connect.php');
-    $id = $_GET['this_id'];
+    $id = $_POST['this_id'];
     $stmt = $conn->prepare("SELECT * FROM to_do_list WHERE id = '$id'");
     $stmt->execute();
 
@@ -9,7 +9,7 @@
     $row = $stmt->fetch();
     
     if(isset($_POST['btn_edit'])){
-        $id = $_GET['this_id'];
+        $id = $_POST['this_id'];
         $description = $_POST['description'];
         $begin_date = $_POST['begin_date'];
         $end_date = $_POST['end_date'];

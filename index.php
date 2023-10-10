@@ -29,7 +29,7 @@ try{
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="get">
+<form action="index.php" method="post">
     <table>
             <th>STT</th>
             <th>Description</th>
